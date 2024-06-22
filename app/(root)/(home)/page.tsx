@@ -1,10 +1,11 @@
+import LocalSearchbar from "@/components/shared/search/LocalSearchbar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const Home = () => {
   return (
     <>
-      <div className="flex w-full items-center justify-between gap-4 max-sm:flex-col-reverse">
+      <div className="flex w-full justify-between gap-4 max-sm:flex-col-reverse sm:items-center">
         <h1 className="h1-bold text-dark100_light900">All Questions</h1>
 
         <Link href="/ask-question" className="flex justify-end max-sm:w-full">
@@ -12,6 +13,17 @@ const Home = () => {
             Ask a Question
           </Button>
         </Link>
+      </div>
+
+      <div className="mt-11 flex justify-between gap-5 max-sm:flex-col sm:items-center">
+        <LocalSearchbar
+          route="/"
+          iconPosition="left"
+          imgSrc="/assets/icons/search.svg"
+          placeholder="Search questions..."
+          otherClasses="flex-1"
+        />
+        <p className="bg-purple-300 md:hidden">Filter</p>
       </div>
     </>
   );
