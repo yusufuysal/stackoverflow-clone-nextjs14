@@ -20,10 +20,10 @@ const questions = [
       name: "John Doe",
       picture: "https://randomuser.me/api/portraits/men/1.jpg",
     },
-    upvotes: 15,
+    upvotes: 154876,
     views: 76,
     answers: [{}, {}, {}, {}, {}], // Random objects as placeholders for answers
-    createdAt: new Date("2021-09-01T12:00:00.000Z"),
+    createdAt: new Date("2023-09-01T12:00:00.000Z"),
   },
   {
     _id: "2",

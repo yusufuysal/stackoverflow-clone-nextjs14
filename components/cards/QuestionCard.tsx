@@ -1,3 +1,4 @@
+import { formatAndDivideNumbers, getTimestamp } from "@/lib/utils";
 import Link from "next/link";
 import Metric from "../shared/Metric";
 import RenderTag from "../shared/RenderTag";
@@ -28,7 +29,7 @@ const QuestionCard = ({
       <div className="flex flex-col-reverse items-start justify-between gap-5 sm:flex-row">
         <div>
           <span className="subtle-regular text-dark400_light700 line-clamp-1 flex sm:hidden">
-            {String(createdAt)}
+            {getTimestamp(createdAt)}
           </span>
 
           <Link href={`/question/${_id}`}>
@@ -47,23 +48,32 @@ const QuestionCard = ({
 
       <div className="flex-between mt-6 w-full flex-wrap gap-3">
         <Metric
+          imgUrl="/assets/icons/avatar.svg"
+          alt="user"
+          value={author.name}
+          title={` - asked ${getTimestamp(createdAt)}`}
+          href={`profile/${author._id}`}
+          isAuthor
+          textStyles="body-medium text-dark400_light700"
+        />
+        <Metric
           imgUrl="/assets/icons/like.svg"
           alt="Upvotes"
-          value={upvotes}
+          value={formatAndDivideNumbers(upvotes)}
           title="Votes"
           textStyles="small-medium text-dark400_light800"
         />
         <Metric
           imgUrl="/assets/icons/message.svg"
           alt="message"
-          value={answers.length}
+          value={formatAndDivideNumbers(answers.length)}
           title="Answers"
           textStyles="small-medium text-dark400_light800"
         />
         <Metric
           imgUrl="/assets/icons/eye.svg"
           alt="eye"
-          value={views}
+          value={formatAndDivideNumbers(views)}
           title="Views"
           textStyles="small-medium text-dark400_light800"
         />
