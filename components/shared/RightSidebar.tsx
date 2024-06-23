@@ -1,38 +1,38 @@
 import Image from "next/image";
 import Link from "next/link";
-import RenderTag from "../render-tag/RenderTag";
+import RenderTag from "./RenderTag";
 
 const RightSidebar = () => {
   const topQuestions = [
     {
-      _id: 1,
+      _id: "1",
       title:
         "Best practices for data fetching in a Next.js application with Server-Side Rendering (SSR)?",
     },
     {
-      _id: 2,
+      _id: "2",
       title: "Is it only me or the font is bolder than necessary?",
     },
     {
-      _id: 3,
+      _id: "3",
       title: "Redux Toolkit Not Updating State as Expected",
     },
     {
-      _id: 4,
+      _id: "4",
       title: "Can I get the course for free?",
     },
     {
-      _id: 5,
+      _id: "5",
       title: "Async/Await Function Not Handling Errors Properly",
     },
   ];
 
   const popularQuestions = [
-    { _id: 1, name: "nextjs", totalQuestions: 32 },
-    { _id: 2, name: "test", totalQuestions: 19 },
-    { _id: 3, name: "react", totalQuestions: 17 },
-    { _id: 4, name: "css", totalQuestions: 13 },
-    { _id: 5, name: "next js", totalQuestions: 9 },
+    { _id: "1", name: "nextjs", totalQuestions: 32 },
+    { _id: "2", name: "test", totalQuestions: 19 },
+    { _id: "3", name: "react", totalQuestions: 17 },
+    { _id: "4", name: "css", totalQuestions: 13 },
+    { _id: "5", name: "next js", totalQuestions: 9 },
   ];
 
   return (
